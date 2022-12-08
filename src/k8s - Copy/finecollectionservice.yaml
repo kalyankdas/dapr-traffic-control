@@ -22,12 +22,10 @@ spec:
     spec:
       containers:
       - name: finecollectionservice
-        image: bbdemo1.azurecr.io/finecollectionservice:latest
+        image: dapr-trafficcontrol/finecollectionservice:1.0
         ports:
         - containerPort: 6001
         env:
           - name: USE_KUBERNETES_SECRETS
             value: "true"
-      imagePullSecrets:
-      - name: bbdemo1secret  
-      
+

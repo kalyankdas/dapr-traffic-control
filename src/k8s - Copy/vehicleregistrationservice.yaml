@@ -22,9 +22,7 @@ spec:
     spec:
       containers:
       - name: vehicleregistrationservice
-        image: bbdemo1.azurecr.io/vehicleregistrationservice:latest
+        image: dapr-trafficcontrol/vehicleregistrationservice:1.0
         ports:
         - containerPort: 6002
-      imagePullSecrets:
-      - name: bbdemo1secret
 

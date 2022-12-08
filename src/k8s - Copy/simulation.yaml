@@ -17,10 +17,7 @@ spec:
     spec:
       containers:
       - name: simulation
-        image: bbdemo1.azurecr.io/simulation:latest
-        imagePullPolicy: IfNotPresent
+        image: dapr-trafficcontrol/simulation:1.0
         env:
           - name: MQTT_HOST
             value: mosquitto.dapr-trafficcontrol.svc.cluster.local
-      imagePullSecrets:
-      - name: bbdemo1secret

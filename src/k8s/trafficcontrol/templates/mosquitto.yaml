@@ -5,7 +5,7 @@ metadata:
     app: mosquitto
     version: v1
   name: mosquitto
-  namespace: dapr-trafficcontrol
+  namespace: {{ .Values.namespace }}
 spec:
   replicas: 1
   selector:
@@ -35,7 +35,7 @@ metadata:
   labels:
     app: mosquitto
   name: mosquitto
-  namespace: dapr-trafficcontrol
+  namespace: {{ .Values.namespace }}
 spec:
   ports:
   - name: "mqtt"

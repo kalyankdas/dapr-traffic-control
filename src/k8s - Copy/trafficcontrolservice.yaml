@@ -22,10 +22,6 @@ spec:
     spec:
       containers:
       - name: trafficcontrolservice
-        image: bbdemo1.azurecr.io/trafficcontrolservice:latest
+        image: dapr-trafficcontrol/trafficcontrolservice:1.0
         ports:
         - containerPort: 6000
-        imagePullPolicy: IfNotPresent
-      imagePullSecrets:
-      - name: bbdemo1secret
- 

@@ -20,13 +20,12 @@ spec:
     spec:
       containers:
         - name: mosquitto
-          image: bbdemo1.azurecr.io/mosquitto:latest
-          imagePullPolicy: IfNotPresent
+          image: dapr-trafficcontrol/mosquitto:1.0
+          imagePullPolicy: Never
           ports:
           - containerPort: 1883
       restartPolicy: Always
-      imagePullSecrets:
-      - name: bbdemo1secret
+
 ---
 
 apiVersion: v1
@@ -43,4 +42,3 @@ spec:
     targetPort: 1883
   selector:
     app: mosquitto
-
